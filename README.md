@@ -1,8 +1,9 @@
 # ICSE 2025 Prototype
 
 This use case folder comprises the following data:
-* [Raw data of the runtime analysis](https://github.com/UST-QuAntiL/QuantME-UseCases/tree/master/2025-icse/evaluation-data)
-* [Quantum computing patterns with their corresponding categories](https://github.com/UST-QuAntiL/QuantME-UseCases/blob/master/2025-icse/PatternCategories.md)
+* [Raw data of the runtime analysis](./evaluation-data)
+* [Raw data of the user study](./user-study)
+* [Quantum computing patterns with their corresponding categories](./PatternCategories.md)
 * The description of the case study (see below)
 
 # Case Study
@@ -68,9 +69,9 @@ Thereby, $IP has to be replaced with the IP-address of the Docker engine used fo
 * Under ``General``:
     * ``Camunda Engine Endpoint``: http://$IP:8090/engine-rest
 * Under ``GitHub``:
-    * ``QRM Repository User``: UST-QuAntiL
-    * ``QRM Repository Name``: QuantME-UseCases
-    * ``QRM Repository Path``: 2025-icse/qrms
+    * ``QRM Repository User``: AnonymousPublicationUpload
+    * ``QRM Repository Name``: icse2025-prototype
+    * ``QRM Repository Path``: qrms-docker
 
     * ``GitHub Token``: $YOUR_GITHUB_API_TOKEN
     * ``GitHub Repository Owner``: $YOUR_GITHUB_USER_NAME
@@ -126,7 +127,7 @@ Next, deploy the workflow by clicking the ``Deploy Workflow`` button.
 Open the Camunda Engine using the following URL: [$IP:8090](http://$IP:8090)
 Use ``demo`` as username and password to log in, which displays the following screen:
 
-![Camunda Loginscreen](docs/workflow-engine-login.png)
+![Camunda Loginscreen](./docs/workflow-engine-login.png)
 
 Click on the home icon in the top-right corner and select ``Cockpit`` to validate that the workflow was successfully uploaded.
 Then, click on ``Processes`` on the top-left and select the workflow from the list.
@@ -137,7 +138,7 @@ This should show a graphical representation of the uploaded workflow:
 To instantiate the workflow, click the home button on the top-right, then select ``Tasklist``.
 Next, click on ``Start process`` on the top-right, select the name of the uploaded workflow, and provide the input parameters:
 
-![Start Workflow Inputs](docs/start-workflow-inputs.png)
+![Start Workflow Inputs](./docs/start-workflow-inputs.png)
 
 The UI displays a notification at the bottom-right that the workflow instance was successfully started.
 Afterward, once more, click on the home icon on the top-right and select Cockpit.
